@@ -150,3 +150,40 @@ Se possível:<br>
 ------------
 
 Disponibilizado com ♥ por [cami-la](https://www.linkedin.com/in/cami-la/ "cami-la").
+
+------------
+
+## ✨ Evoluções implementadas por Alexandre
+
+Além da implementação base proposta no desafio, foram adicionadas as seguintes melhorias:
+
+1. **RankingService**
+    - Ordena os devs por XP acumulado.
+    - Demonstra **abstração** e **encapsulamento** ao separar a lógica em um serviço.
+
+2. **ConquistaService**
+    - Verifica se o dev concluiu o bootcamp.
+    - Mostra **encapsulamento** e reforça a ideia de regras de negócio isoladas.
+
+3. **Projeto.java**
+    - Novo tipo de conteúdo que herda de `Conteudo`.
+    - Demonstra **herança** e **polimorfismo** ao sobrescrever o cálculo de XP.
+
+4. **NivelService**
+    - Transforma XP acumulado em níveis (Iniciante, Intermediário, Avançado).
+    - Exemplo de **abstração** e aplicação de regras de negócio.
+
+5. **PortifolioService**
+    - Exibe histórico de bootcamps concluídos por cada dev.
+    - Demonstra **encapsulamento** e reforça a ideia de portfólio.
+
+---
+
+## 🎯 Resultado esperado
+
+Ao rodar o `Main.java`, o sistema mostra:
+- Ranking de devs com XP e nível.
+- Conquistas de bootcamps concluídos.
+- Portfólio de cada dev.
+
+Essas evoluções reforçam os pilares da POO e tornam o projeto mais completo e gamificado.
