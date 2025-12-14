@@ -2,6 +2,7 @@ import br.com.dio.desafio.dominio.Bootcamp;
 import br.com.dio.desafio.dominio.Curso;
 import br.com.dio.desafio.dominio.Dev;
 import br.com.dio.desafio.dominio.Mentoria;
+import br.com.dio.desafio.dominio.Projeto;
 import br.com.dio.desafio.dominio.ConquistaService;
 import br.com.dio.desafio.dominio.RankingService;
 
@@ -29,6 +30,12 @@ public class Main {
         mentoria.setDescricao("descrição mentoria java");
         mentoria.setData(LocalDate.now());
 
+        // Criando projeto
+        Projeto projetoJava = new Projeto();
+        projetoJava.setTitulo("Projeto Java");
+        projetoJava.setDescricao("Construindo uma API REST");
+        projetoJava.setTecnologia("Spring Boot");
+
         // Criando bootcamp
         Bootcamp bootcamp = new Bootcamp();
         bootcamp.setNome("Bootcamp Java Developer");
@@ -36,20 +43,22 @@ public class Main {
         bootcamp.getConteudos().add(curso1);
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(mentoria);
+        bootcamp.getConteudos().add(projetoJava); // adicionando o novo Projeto
 
         // Criando devs
         Dev devCamila = new Dev();
         devCamila.setNome("Camila");
         devCamila.inscreverBootcamp(bootcamp);
-        devCamila.progredir();
-        devCamila.progredir();
+        devCamila.progredir(); // conclui curso1
+        devCamila.progredir(); // conclui curso2
 
         Dev devJoao = new Dev();
         devJoao.setNome("Joao");
         devJoao.inscreverBootcamp(bootcamp);
-        devJoao.progredir();
-        devJoao.progredir();
-        devJoao.progredir();
+        devJoao.progredir(); // conclui curso1
+        devJoao.progredir(); // conclui curso2
+        devJoao.progredir(); // conclui mentoria
+        devJoao.progredir(); // conclui projeto
 
         // Lista de devs
         List<Dev> devs = new ArrayList<>();
