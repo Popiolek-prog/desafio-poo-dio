@@ -5,6 +5,7 @@ import br.com.dio.desafio.dominio.Mentoria;
 import br.com.dio.desafio.dominio.Projeto;
 import br.com.dio.desafio.dominio.ConquistaService;
 import br.com.dio.desafio.dominio.RankingService;
+import br.com.dio.desafio.dominio.PortifolioService;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -71,5 +72,9 @@ public class Main {
         // Usando o ConquistaService
         System.out.println(ConquistaService.verificarConquista(devCamila, bootcamp));
         System.out.println(ConquistaService.verificarConquista(devJoao, bootcamp));
+
+        // Exibindo portfólio dos devs
+        PortifolioService.exibirPortifolio(devCamila);
+        PortifolioService.exibirPortifolio(devJoao);
     }
 }
