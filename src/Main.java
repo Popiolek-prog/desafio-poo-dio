@@ -43,7 +43,7 @@ public class Main {
         bootcamp.getConteudos().add(curso1);
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(mentoria);
-        bootcamp.getConteudos().add(projetoJava); // adicionando o novo Projeto
+        bootcamp.getConteudos().add(projetoJava);
 
         // Criando devs
         Dev devCamila = new Dev();
@@ -65,7 +65,7 @@ public class Main {
         devs.add(devCamila);
         devs.add(devJoao);
 
-        // Usando o RankingService
+        // Usando o RankingService (já mostra nível)
         RankingService.exibirRanking(devs);
 
         // Usando o ConquistaService
