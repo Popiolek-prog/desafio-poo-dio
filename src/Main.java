@@ -4,6 +4,10 @@ import br.com.dio.desafio.dominio.Dev;
 import br.com.dio.desafio.dominio.Mentoria;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -57,6 +61,19 @@ public class Main {
         System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
         System.out.println("Conteúdos Concluidos João:" + devJoao.getConteudosConcluidos());
         System.out.println("XP:" + devJoao.calcularTotalXp());
+
+        // Depois de criar devCamila e devJoao
+        List<Dev> devs = new ArrayList<>();
+        devs.add(devCamila);
+        devs.add(devJoao);
+
+        devs.sort(Comparator.comparing(Dev::calcularTotalXp).reversed());
+
+        System.out.println("🏆 Ranking de Devs:");
+        for (int i = 0; i < devs.size(); i++) {
+            Dev dev = devs.get(i);
+            System.out.println((i+1) + "º lugar: " + dev.getNome() + " - XP: " + dev.calcularTotalXp());
+        }
 
     }
 
