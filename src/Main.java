@@ -2,15 +2,17 @@ import br.com.dio.desafio.dominio.Bootcamp;
 import br.com.dio.desafio.dominio.Curso;
 import br.com.dio.desafio.dominio.Dev;
 import br.com.dio.desafio.dominio.Mentoria;
+import br.com.dio.desafio.dominio.ConquistaService;
+import br.com.dio.desafio.dominio.RankingService;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
-
 public class Main {
+
     public static void main(String[] args) {
+        // Criando cursos
         Curso curso1 = new Curso();
         curso1.setTitulo("curso java");
         curso1.setDescricao("descrição curso java");
@@ -21,15 +23,13 @@ public class Main {
         curso2.setDescricao("descrição curso js");
         curso2.setCargaHoraria(4);
 
+        // Criando mentoria
         Mentoria mentoria = new Mentoria();
         mentoria.setTitulo("mentoria de java");
         mentoria.setDescricao("descrição mentoria java");
         mentoria.setData(LocalDate.now());
 
-        /*System.out.println(curso1);
-        System.out.println(curso2);
-        System.out.println(mentoria);*/
-
+        // Criando bootcamp
         Bootcamp bootcamp = new Bootcamp();
         bootcamp.setNome("Bootcamp Java Developer");
         bootcamp.setDescricao("Descrição Bootcamp Java Developer");
@@ -37,44 +37,30 @@ public class Main {
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(mentoria);
 
+        // Criando devs
         Dev devCamila = new Dev();
         devCamila.setNome("Camila");
         devCamila.inscreverBootcamp(bootcamp);
-        System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
         devCamila.progredir();
         devCamila.progredir();
-        System.out.println("-");
-        System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
-        System.out.println("Conteúdos Concluídos Camila:" + devCamila.getConteudosConcluidos());
-        System.out.println("XP:" + devCamila.calcularTotalXp());
-
-        System.out.println("-------");
 
         Dev devJoao = new Dev();
         devJoao.setNome("Joao");
         devJoao.inscreverBootcamp(bootcamp);
-        System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
         devJoao.progredir();
         devJoao.progredir();
         devJoao.progredir();
-        System.out.println("-");
-        System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
-        System.out.println("Conteúdos Concluidos João:" + devJoao.getConteudosConcluidos());
-        System.out.println("XP:" + devJoao.calcularTotalXp());
 
-        // Depois de criar devCamila e devJoao
+        // Lista de devs
         List<Dev> devs = new ArrayList<>();
         devs.add(devCamila);
         devs.add(devJoao);
 
-        devs.sort(Comparator.comparing(Dev::calcularTotalXp).reversed());
+        // Usando o RankingService
+        RankingService.exibirRanking(devs);
 
-        System.out.println("🏆 Ranking de Devs:");
-        for (int i = 0; i < devs.size(); i++) {
-            Dev dev = devs.get(i);
-            System.out.println((i+1) + "º lugar: " + dev.getNome() + " - XP: " + dev.calcularTotalXp());
-        }
-
+        // Usando o ConquistaService
+        System.out.println(ConquistaService.verificarConquista(devCamila, bootcamp));
+        System.out.println(ConquistaService.verificarConquista(devJoao, bootcamp));
     }
-
 }
