@@ -1,4 +1,3 @@
---- 
 ## ✨ Resultado da execução por Alexandre ao rodar o `Main.java`, obtive a seguinte saída:
 
 Ranking de Devs:
