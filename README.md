@@ -1,11 +1,11 @@
 ## ✨ Resultado da execução por Alexandre ao rodar o `Main.java`, obtive a seguinte saída:
 
-Ranking de Devs:
-1º lugar: Joao - XP: 300.0 - Nível: Avançado
-2º lugar: Camila - XP: 120.0 - Nível: Intermediário
+Ranking de Devs:  
+1º lugar: Joao - XP: 300.0 - Nível: Avançado  
+2º lugar: Camila - XP: 120.0 - Nível: Intermediário  
 
-Camila ainda está em progresso.
-Joao concluiu o Bootcamp!
+Camila ainda está em progresso.  
+Joao concluiu o Bootcamp!  
 
 Portfólio de Camila:
 Nenhum bootcamp concluído ainda.
