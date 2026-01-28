@@ -1,3 +1,30 @@
+--- 
+## ✨ Resultado da execução por Alexandre ao rodar o `Main.java`, obtive a seguinte saída:
+
+Ranking de Devs:
+1º lugar: Joao - XP: 300.0 - Nível: Avançado
+2º lugar: Camila - XP: 120.0 - Nível: Intermediário
+
+Camila ainda está em progresso.
+Joao concluiu o Bootcamp!
+
+Portfólio de Camila:
+Nenhum bootcamp concluído ainda.
+
+Portfólio de Joao:
+Bootcamp Java Developer
+
+### 🧩 Interpretação
+- João concluiu todos os conteúdos e acumulou **300 XP** → nível Avançado.  
+- Camila concluiu apenas parte dos conteúdos, acumulando **120 XP** → nível Intermediário.  
+- O sistema demonstra na prática os pilares da POO:
+  - **Abstração**: classe `Conteudo` abstrata.  
+  - **Encapsulamento**: atributos privados com getters/setters.  
+  - **Herança**: `Curso`, `Mentoria` e `Projeto` herdam de `Conteudo`.  
+  - **Polimorfismo**: cada classe sobrescreve `calcularXp()` de forma diferente.
+
+---
+
 <h1> Desafio: Aprenda na Prática Programação Orientada a Objetos</h1>
 
 <p align="center"> 📜 <a href="https://academiapme-my.sharepoint.com/:p:/g/personal/camila_cavalcante_dio_me/EaXyYOjBaFpZjkxhexMo5EcBKMEEAI5t5aHlsTjnBQJlUw?e=nxdB6C"> SLIDES APRESENTADO NO PROJETO </a> 📜 </P>
